@@ -29,7 +29,7 @@ public class BillSchedule {
      */
     @Scheduled(cron = "0 0 20 * * ?")
     public void billCompute() {
-        System.out.println(3);
+        System.out.println(2);
         List<FamilyElectricityBalanceDTO> electricityBill = networkService.getElectricityBill();
         for (FamilyElectricityBalanceDTO dto : electricityBill) {
             String subject = "煤气费低于阈值提醒";
